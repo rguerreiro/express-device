@@ -2,14 +2,15 @@
     "name": "express-device",
     "author": "Rodrigo Guerreiro",
     "description": "Browser detection library, built on top of express",
-    "keywords": ["browser", "mobile", "detection", "user-agent"],
+    "keywords": ["browser", "mobile", "detection", "user-agent", "express"],
     "version": "0.0.1",
     "main": "./index.js",
     "private": false,
-    "engines": { "node": ">= 0.4.x" }
+    "engines": { "node": ">= 0.4.x" },
     "devDependencies": {
         "connect": "1.8.x",
         "express": "2.5.x",
+        "ejs": "*",
         "nodeunit": "*"
     }
 }
