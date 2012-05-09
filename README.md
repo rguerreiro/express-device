@@ -20,9 +20,10 @@ But then I came across with Brett Jankord's [blog](http://www.brettjankord.com).
 
 ## how to use it?
 
-To install it you only need to do
+To install it you only need to do:
+ 
     $ npm install express-device
-
+    
 express-device is built on top of connect\express frameworks. Here's an example on how to configure express to use it:
 
 ```javascript
