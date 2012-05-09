@@ -24,7 +24,7 @@ To install it you only need to do:
  
     $ npm install express-device
     
-express-device is built on top of connect\express frameworks. Here's an example on how to configure express to use it:
+express-device is built on top of [express](http://expressjs.com/) framework. Here's an example on how to configure express to use it:
 
 ```javascript
 app.configure(function(){
