@@ -2,7 +2,7 @@
 
 ## why express-device?
 
-I'm really into node.js and lately I've been palying a lot with it. One of the steps I wanted to take in my learning path was to build a node.js module and published it to npm. 
+I'm really into node.js and lately I've been playing a lot with it. One of the steps I wanted to take in my learning path was to build a node.js module and published it to npm. 
 
 Then I had an idea: why not develop a server side library to mimic the behaviour that Twitter's [Bootstrap](http://twitter.github.com/bootstrap/scaffolding.html#responsive) has in order to identify where a browser is running on a desktop, tablet or phone. This is great for a [responsive design](http://en.wikipedia.org/wiki/Responsive_Web_Design), but on the server side.
 
@@ -16,7 +16,7 @@ First I started to search how I could parse the user-agent string and how to dif
 - http://www.htmlgoodies.com/beyond/webmaster/toolbox/article.php/3888106/How-Can-I-Detect-the-iPhone--iPads-User-Agent.htm
 - http://windowsteamblog.com/windows_phone/b/wpdev/archive/2011/08/29/introducing-the-ie9-on-windows-phone-mango-user-agent-string.aspx
 
-But then I came across with Brett Jankord's [blog](http://www.brettjankord.com). He developed [Categorizr](http://www.brettjankord.com/2012/01/16/categorizr-a-modern-device-detection-script/) which is what I was trying to do for node.js but for PHP. He has the code hosted at [github](https://github.com/bjankord/Categorizr). So, express-device parsing methods (to extract device type) are based on Categorizr. Also I've used all of his [compilation of user-agent strings](http://brettjankord.com/categorizr/categorizr-results.php) to build my unit tests.
+But then I came across with Brett Jankord's [blog](http://www.brettjankord.com). He developed [Categorizr](http://www.brettjankord.com/2012/01/16/categorizr-a-modern-device-detection-script/) which is what I was trying to do for node.js but for PHP. He has the code hosted at [Github](https://github.com/bjankord/Categorizr). So, express-device parsing methods (to extract device type) are based on Categorizr. Also I've used all of his [user-agent strings compilation](http://brettjankord.com/categorizr/categorizr-results.php) to build my unit tests.
 
 ## how to use it?
 
@@ -105,3 +105,28 @@ Currently express-device is on version 0.1.0. There are a couple of things that 
 - parsing the OS
 
 Feel free to add issues with your own ideas or make pull requests (prefered method).
+
+## license
+
+(The MIT License)
+
+Copyright (c) 2012 Rodrigo Guerreiro
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
