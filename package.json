@@ -8,8 +8,8 @@
     "private": false,
     "engines": { "node": ">= 0.4.x" },
     "devDependencies": {
-        "connect": "1.8.x",
-        "express": "2.5.x",
+        "connect": ">= 1.8.x",
+        "express": ">= 2.5.x",
         "ejs": "*",
         "nodeunit": "*"
     }
