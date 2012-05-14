@@ -16,5 +16,5 @@
     "scripts": {
         "test": "make test"
     },
-    "repository": "git://github.com/rguerreiro/express-device",
+    "repository": "git://github.com/rguerreiro/express-device"
 }
