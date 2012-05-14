@@ -7,9 +7,11 @@
     "main": "./index.js",
     "private": false,
     "engines": { "node": ">=0.4.x <0.7.x" },
-    "devDependencies": {
+    "dependencies": {
         "connect": ">=1.8.x",
-        "express": ">=2.5.x <3.0.0alpha1",
+        "express": ">=2.5.x <3.0.0alpha1"
+    },
+    "devDependencies": {
         "ejs": "*",
         "nodeunit": "*"
     },
