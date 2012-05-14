@@ -6,14 +6,15 @@
     "version": "0.1.0",
     "main": "./index.js",
     "private": false,
-    "engines": { "node": ">= 0.4.x" },
+    "engines": { "node": ">=0.4.x <0.7.x" },
     "devDependencies": {
         "connect": ">=1.8.x",
-        "express": ">=2.5.x <2.6.x",
+        "express": ">=2.5.x <3.0.0alpha1",
         "ejs": "*",
         "nodeunit": "*"
     },
     "scripts": {
         "test": "make test"
-    }
+    },
+    "repository": "git://github.com/rguerreiro/express-device",
 }
