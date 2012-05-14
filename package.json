@@ -12,5 +12,8 @@
         "express": ">= 2.5.x",
         "ejs": "*",
         "nodeunit": "*"
+    },
+    "scripts": {
+        "test": "make test"
     }
 }
