@@ -1,4 +1,4 @@
-# express-device [![Build Status](https://secure.travis-ci.org/rguerreiro/express-device.png)](http://travis-ci.org/rguerreiro/express-device)
+# express-device [![Build Status](https://secure.travis-ci.org/rguerreiro/express-device.png?branch=master)](http://travis-ci.org/rguerreiro/express-device)
 
 ## why express-device?
 
