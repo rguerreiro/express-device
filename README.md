@@ -22,7 +22,7 @@ But then I came across with Brett Jankord's [blog](http://www.brettjankord.com).
 
 To install it you only need to do:
  
-    $ npm install express-device
+    $ npm install express-device@0.1.1
     
 express-device is built on top of [express](http://expressjs.com/) framework. Here's an example on how to configure express to use it:
 
