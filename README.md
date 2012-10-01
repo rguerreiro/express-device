@@ -103,6 +103,11 @@ Here's an example on how to use them (using [EJS](https://github.com/visionmedia
 
 You can check a full working example [here](https://github.com/rguerreiro/express-device/tree/master/example).
 
+## contributors
+
+- @rguerreiro
+- aledbf
+
 ## where to go from here?
 
 Currently express-device is on version 0.1.0. There are a couple of things that I have in mind to add, such as:
