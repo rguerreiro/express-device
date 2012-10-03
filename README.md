@@ -106,7 +106,7 @@ You can check a full working example [here](https://github.com/rguerreiro/expres
 
 ## where to go from here?
 
-Currently express-device is on version 0.1.0. There are a couple of things that I have in mind to add, such as:
+Currently express-device is on version 0.2.2. There are a couple of things that I have in mind to add, such as:
 - different view rendering based on device type
 - parsing the OS
 
