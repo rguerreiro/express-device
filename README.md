@@ -106,7 +106,7 @@ You can check a full working example [here](https://github.com/rguerreiro/expres
 ## contributors
 
 - @rguerreiro
-- aledbf
+- @aledbf
 
 ## where to go from here?
 

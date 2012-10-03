@@ -406,5 +406,15 @@ exports['81.Windows HTC Radar - Desktop Mode'] = function(test) {
     test.equal(parser.get_type(), 'desktop');
     test.done();
 };
+exports['No user agent - Desktop Mode'] = function(test) {
+    var parser = new device.Parser({ headers: { 'user-agent': undefined } });
+    test.equal(parser.get_type(), 'desktop');
+    test.done();
+};
+exports['Empty user agent - Desktop Mode'] = function(test) {
+    var parser = new device.Parser({ headers: { 'user-agent': '' } });
+    test.equal(parser.get_type(), 'desktop');
+    test.done();
+};
 
 base.run_test(__filename);
