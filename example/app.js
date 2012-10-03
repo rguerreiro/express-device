@@ -1,7 +1,8 @@
 var express = require('express'),
     device  = require('../');
     
-var app = express.createServer();
+var app = express();
+var port = process.env.PORT || 3000;
 
 app.configure(function(){
     app.set('view engine', 'ejs');
@@ -12,15 +13,16 @@ app.configure(function(){
     app.use(express.methodOverride());
     app.use(express.cookieParser());
     app.use(device.capture());
+    
+    app.enableDeviceHelpers();
+
     app.use(app.router);
 });
-
-app.enableDeviceHelpers();
 
 app.get('/', function(req, res) {
     res.render('index', { title: 'Testing express-device' });
 });
 
-app.listen(process.env.PORT);
+app.listen(port);
 
-console.log("Express server listening on port %d in %s mode", process.env.PORT, app.settings.env);
+console.log("Express server listening on port %d in %s mode", port, app.settings.env);

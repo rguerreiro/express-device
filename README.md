@@ -51,7 +51,7 @@ By doing this you're enabling the **request** object to have a property called *
     </tr>
 </table>
 
-express-device also comes with some [dynamic helpers](http://expressjs.com/guide.html#app.dynamichelpers\(\)) that will help you to build a responsive design:
+express-device can also add some variables to the response [locals property](http://expressjs.com/api.html#res.locals\(\)) that will help you to build a responsive design:
 <table>
     <tr>
         <td>is_desktop</td>
@@ -78,7 +78,7 @@ express-device also comes with some [dynamic helpers](http://expressjs.com/guide
         <td>It returns the device type string parsed from the request</td>
     </tr>
 </table>
-In order to enable this methods you have to call **app.enableDeviceHelpers()**.
+In order to enable this methods you have to call **app.enableDeviceHelpers()**, just before **app.use(app.router)**.
 
 Here's an example on how to use them (using [EJS](https://github.com/visionmedia/ejs) view engine):
 ```html
@@ -110,7 +110,7 @@ You can check a full working example [here](https://github.com/rguerreiro/expres
 
 ## where to go from here?
 
-Currently express-device is on version 0.1.0. There are a couple of things that I have in mind to add, such as:
+Currently express-device is on version 0.2.2. There are a couple of things that I have in mind to add, such as:
 - different view rendering based on device type
 - parsing the OS
 
