@@ -26,7 +26,7 @@ To install it you only need to do:
     
 Case you're using [express](http://expressjs.com/) 2.x.x you should install version 0.1.1:
  
-    $ npm install express-device@0.1.1
+    $ npm install express-device@0.1.2
 
 express-device is built on top of [express](http://expressjs.com/) framework. Here's an example on how to configure express to use it:
 
