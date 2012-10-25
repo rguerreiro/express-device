@@ -34,11 +34,14 @@
           <h1>express-device</h1>
           <p>Browser detection library for node.js, built on top of express</p>
           <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/rguerreiro">rguerreiro</a>&nbsp;<img src="https://secure.travis-ci.org/rguerreiro/express-device.png" /></span>
+          <span class="credits left">Project maintained by <a href="https://github.com/rguerreiro">rguerreiro</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
         </div>
-        
-        <h2>why express-device?</h2>
+
+        <h1>express-device <a href="http://travis-ci.org/rguerreiro/express-device"><img src="https://secure.travis-ci.org/rguerreiro/express-device.png?branch=master" alt="Build Status"></a>
+</h1>
+
+<h2>why express-device?</h2>
 
 <p>I'm really into node.js and lately I've been playing a lot with it. One of the steps I wanted to take in my learning path was to build a node.js module and published it to npm. </p>
 
@@ -61,16 +64,17 @@
 
 <p>To install it you only need to do:</p>
 
-<pre><code>$ npm install express-device</code></pre>
+<pre><code>$ npm install express-device
+</code></pre>
 
 <p>Case you're using <a href="http://expressjs.com/">express</a> 2.x.x you should install version 0.1.2:</p>
 
-<pre><code>$ npm install express-device@0.1.2</code></pre>
+<pre><code>$ npm install express-device@0.1.2
+</code></pre>
 
 <p>express-device is built on top of <a href="http://expressjs.com/">express</a> framework. Here's an example on how to configure express to use it:</p>
 
-<div class="highlight">
-<pre><span class="nx">app</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+<div class="highlight"><pre><span class="nx">app</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
     <span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'view engine'</span><span class="p">,</span> <span class="s1">'ejs'</span><span class="p">);</span>
     <span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'view options'</span><span class="p">,</span> <span class="p">{</span> <span class="nx">layout</span><span class="o">:</span> <span class="kc">false</span> <span class="p">});</span>
     <span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'views'</span><span class="p">,</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">'/views'</span><span class="p">);</span>
@@ -78,9 +82,7 @@
     <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">bodyParser</span><span class="p">());</span>
     <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">device</span><span class="p">.</span><span class="nx">capture</span><span class="p">());</span>
 <span class="p">});</span>
-</pre>
-</div>
-
+</pre></div>
 
 <p>By doing this you're enabling the <strong>request</strong> object to have a property called <strong>device</strong>, which have the following properties:</p>
 
@@ -97,7 +99,7 @@
         <td>It gets the device type for the current request</td>
         <td>desktop, tv, tablet ot phone</td>
     </tr>
-</table><p>express-device also comes with some <a href="http://expressjs.com/guide.html#app.dynamichelpers()">dynamic helpers</a> that will help you to build a responsive design:</p>
+</table><p>express-device can also add some variables to the response <a href="http://expressjs.com/api.html#res.locals()">locals property</a> that will help you to build a responsive design:</p>
 
 <table>
 <tr>
@@ -124,12 +126,11 @@
 <td>device_type</td>
         <td>It returns the device type string parsed from the request</td>
     </tr>
-</table><p>In order to enable this methods you have to call <strong>app.enableDeviceHelpers()</strong>.</p>
+</table><p>In order to enable this methods you have to call <strong>app.enableDeviceHelpers()</strong>, just before <strong>app.use(app.router)</strong>.</p>
 
 <p>Here's an example on how to use them (using <a href="https://github.com/visionmedia/ejs">EJS</a> view engine):</p>
 
-<div class="highlight">
-<pre><span class="nt">&lt;html&gt;</span>
+<div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
     <span class="nt">&lt;title&gt;</span><span class="err">&lt;</span>%= title %&gt;<span class="nt">&lt;/title&gt;</span>
 <span class="nt">&lt;/head&gt;</span>
@@ -146,26 +147,52 @@
     <span class="err">&lt;</span>% } %&gt;
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
-</pre>
-</div>
-
+</pre></div>
 
 <p>You can check a full working example <a href="https://github.com/rguerreiro/express-device/tree/master/example">here</a>.</p>
+
+<p>In version 0.3.0 a cool feature was added: the ability to route to a specific view\layout based on the device type. Consider the infrastruture below:</p>
+
+<pre><code>.
+|-- views
+    |-- phone
+    |    |-- layout.ejs
+    |    `-- index.ejs
+    |-- layout.ejs
+    `-- index.ejs
+</code></pre>
+
+<p>And this code:</p>
+
+<div class="highlight"><pre><span class="nx">app</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'view engine'</span><span class="p">,</span> <span class="s1">'ejs'</span><span class="p">);</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'view options'</span><span class="p">,</span> <span class="p">{</span> <span class="nx">layout</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'views'</span><span class="p">,</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">'/views'</span><span class="p">);</span>
+
+    <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">bodyParser</span><span class="p">());</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">device</span><span class="p">.</span><span class="nx">capture</span><span class="p">());</span>
+
+    <span class="nx">app</span><span class="p">.</span><span class="nx">enableViewRouting</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">'index.ejs'</span><span class="p">);</span>
+<span class="p">})</span>
+</pre></div>
+
+<p>If the request comes from a <em>phone</em> device then the response will render views/phone/index.ejs view with views/phone/layout.ejs as layout. If it comes from another type of device then it will render the default views/index.ejs with the default views/index.ejs. Simply add a folder below your views root with the device type code (phone, tablet, tv or desktop) for the device type overrides. Several combinations are supported. Please check the <a href="https://github.com/rguerreiro/express-device/blob/master/test/view_route_test.js">tests</a> for more examples.</p>
 
 <h2>contributors</h2>
 
 <ul>
 <li><a href="https://github.com/rguerreiro">rguerreiro</a></li>
 <li><a href="https://github.com/aledbf">aledbf</a></li>
-</ul>
+</ul><h2>where to go from here?</h2>
 
-<h2>where to go from here?</h2>
-
-<p>Currently express-device is on version 0.1.0. There are a couple of things that I have in mind to add, such as:</p>
+<p>Currently express-device is on version 0.3.0. There are a couple of things that I have in mind to add, such as:</p>
 
 <ul>
-<li>different view rendering based on device type</li>
-<li>parsing the OS</li>
+<li>trying to parse the OS from the request</li>
 </ul><p>Feel free to add issues with your own ideas or make pull requests (prefered method).</p>
 
 <h2>license</h2>
@@ -195,7 +222,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
       </section>
 
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
