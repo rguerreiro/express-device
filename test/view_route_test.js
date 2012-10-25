@@ -110,6 +110,28 @@ describe('app',function(){
     	});
 	});
 
+	describe('GET / from bot',function(){
+    	it('should render with bot/layout.ejs',function(done){
+      		request(app)
+	        .get('/')
+	        .set('User-Agent', 'Bot')
+	        .expect(200)
+	        .expect('<html><head><title>express-device for bot</title></head><body><h1>index</h1></body></html>')
+	        .end(done);
+    	});
+  	});
+
+	describe('GET /view from bot',function(){
+    	it('should render view bot/index2.ejs with bot/layout.ejs',function(done){
+      		request(app)
+	        .get('/view')
+	        .set('User-Agent', 'Bot')
+	        .expect(200)
+	        .expect('<html><head><title>express-device for bot</title></head><body><h1>bot</h1></body></html>')
+	        .end(done);
+    	});
+	});
+
 	describe('GET /custom-layout',function(){
     	it('should render with xpto/etc.ejs',function(done){
       		request(app)
