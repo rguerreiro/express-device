@@ -6,17 +6,18 @@
     "version": "0.3.0",
     "main": "./index.js",
     "private": false,
-    "engines": { "node": ">=0.7.x" },
+    "engines": { "node": "*" },
     "dependencies": {
         "express": ">=3.0.0",
         "express-partials": "git://github.com/publicclass/express-partials.git#master"
     },
     "devDependencies": {
         "ejs": "*",
-        "nodeunit": "*"
+        "mocha": "*",
+        "supertest": "*"
     },
     "scripts": {
-        "test": "make test"
+        "test": "mocha"
     },
     "repository": "git://github.com/rguerreiro/express-device"
 }
