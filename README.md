@@ -47,7 +47,7 @@ By doing this you're enabling the **request** object to have a property called *
         <td>type</td>
         <td>string</td>
         <td>It gets the device type for the current request</td>
-        <td>desktop, tv, tablet ot phone</td>
+        <td>desktop, tv, tablet, phone or bot</td>
     </tr>
 </table>
 
@@ -72,6 +72,10 @@ express-device can also add some variables to the response [locals property](htt
     <tr>
         <td>is_tv</td>
         <td>It returns true in case the device type is "tv"; false otherwise</td>
+    </tr>
+    <tr>
+        <td>is_bot</td>
+        <td>It returns true in case the device type is "bot"; false otherwise</td>
     </tr>
     <tr>
         <td>device_type</td>
