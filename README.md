@@ -103,6 +103,35 @@ Here's an example on how to use them (using [EJS](https://github.com/visionmedia
 
 You can check a full working example [here](https://github.com/rguerreiro/express-device/tree/master/example).
 
+In version 0.3.0 a cool feature was added: the ability to route to a specific view\layout based on the device type. Consider the infrastruture below:
+    .
+    |-- views
+        |-- phone
+        |    |-- layout.ejs
+        |    `-- index.ejs
+        |-- layout.ejs
+        `-- index.ejs
+
+And this code:
+```javascript
+app.configure(function(){
+    app.set('view engine', 'ejs');
+    app.set('view options', { layout: true });
+    app.set('views', __dirname + '/views');
+    
+    app.use(express.bodyParser());
+    app.use(device.capture());
+
+    app.enableViewRouting();
+});
+
+app.get('/', function(req, res) {
+    res.render('index.ejs');
+})
+```
+
+If the request comes from a *phone* device then the response will render views/phone/index.ejs view with views/phone/layout.ejs as layout. If it comes from another type of device then it will render the default views/index.ejs with the default views/index.ejs. Simply add a folder below your views root with the device type code (phone, tablet, tv or desktop) for the device type overrides. Several combinations are supported. Please check the [tests](https://github.com/rguerreiro/express-device/blob/master/test/view_route_test.js) for more examples.
+
 ## contributors
 
 - [rguerreiro](https://github.com/rguerreiro)
@@ -110,9 +139,8 @@ You can check a full working example [here](https://github.com/rguerreiro/expres
 
 ## where to go from here?
 
-Currently express-device is on version 0.2.2. There are a couple of things that I have in mind to add, such as:
-- different view rendering based on device type
-- parsing the OS
+Currently express-device is on version 0.3.0. There are a couple of things that I have in mind to add, such as:
+- trying to parse the OS from the request
 
 Feel free to add issues with your own ideas or make pull requests (prefered method).
 
