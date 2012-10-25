@@ -109,7 +109,7 @@ You can check a full working example [here](https://github.com/rguerreiro/expres
 Currently express-device is on version 0.3.0. There are a couple of things that I have in mind to add, such as:
 - trying to parse the OS from the request
 
-Feel free to add issues with your own ideas or make pull requests (prefered method). Features from versions >= v0.3.0 won't be supported form express v2.x.x.
+Feel free to add issues with your own ideas or make pull requests (prefered method). Features from versions >= v0.3.0 won't be supported for express v2.x.x.
 
 ## license
 
