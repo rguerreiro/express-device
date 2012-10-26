@@ -32,3 +32,7 @@ app.get('/no-layout', function(req, res, next) {
 app.get('/no-layout2', function(req, res, next) {
     res.render('index2.ejs', { layout: false });
 });
+
+app.get('/ignore', function(req, res, next) {
+    res.render('index.ejs', { ignoreViewRouting: true });
+});

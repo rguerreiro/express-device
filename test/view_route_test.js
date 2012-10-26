@@ -152,4 +152,15 @@ describe('app',function(){
 	        .end(done);
     	});
   	});
+    
+    describe('GET /ignore from phone',function(){
+        it('should render with default layout',function(done){
+      		request(app)
+	        .get('/ignore')
+	        .set('User-Agent', 'iPhone')
+	        .expect(200)
+	        .expect('<html><head><title>express-device</title></head><body><h1>index</h1></body></html>')
+	        .end(done);
+    	});
+  	});
 });
