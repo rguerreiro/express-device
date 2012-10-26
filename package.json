@@ -2,7 +2,7 @@
     "name": "express-device",
     "author": "Rodrigo Guerreiro (@rguerreiro)",
     "description": "Browser detection library, built on top of express",
-    "keywords": ["browser", "mobile", "detection", "user-agent", "express", "layout", "view routing"],
+    "keywords": ["browser", "mobile", "detection", "user-agent", "express", "layout", "view routing", "desktop", "phone", "tablet", "tv", "bot"],
     "version": "0.3.0",
     "main": "./index.js",
     "private": false,
