@@ -107,7 +107,7 @@ Here's an example on how to use them (using [EJS](https://github.com/visionmedia
 
 You can check a full working example [here](https://github.com/rguerreiro/express-device/tree/master/example).
 
-In version 0.3.0 a cool feature was added: the ability to route to a specific view\layout based on the device type. Consider the infrastruture below:
+In version 0.3.0 a cool feature was added: the ability to route to a specific view\layout based on the device type (must call the **app.enableViewRouting()** to set it up). Consider the code below:
 
     .
     |-- views
@@ -137,7 +137,7 @@ app.get('/', function(req, res) {
 
 If the request comes from a *phone* device then the response will render views/phone/index.ejs view with views/phone/layout.ejs as layout. If it comes from another type of device then it will render the default views/index.ejs with the default views/index.ejs. Simply add a folder below your views root with the device type code (phone, tablet, tv or desktop) for the device type overrides. Several combinations are supported. Please check the [tests](https://github.com/rguerreiro/express-device/blob/master/test/view_route_test.js) for more examples.
 
-You also have an _ignore_ option:
+You also have an **ignore** option:
 ```javascript
 app.get('/', function(req, res) {
     res.render('index.ejs', { ignoreViewRouting: true });
