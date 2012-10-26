@@ -137,6 +137,13 @@ app.get('/', function(req, res) {
 
 If the request comes from a *phone* device then the response will render views/phone/index.ejs view with views/phone/layout.ejs as layout. If it comes from another type of device then it will render the default views/index.ejs with the default views/index.ejs. Simply add a folder below your views root with the device type code (phone, tablet, tv or desktop) for the device type overrides. Several combinations are supported. Please check the [tests](https://github.com/rguerreiro/express-device/blob/master/test/view_route_test.js) for more examples.
 
+You also have an _ignore_ option:
+```javascript
+app.get('/', function(req, res) {
+    res.render('index.ejs', { ignoreViewRouting: true });
+})
+```
+
 ## contributors
 
 - [rguerreiro](https://github.com/rguerreiro)
@@ -144,7 +151,7 @@ If the request comes from a *phone* device then the response will render views/p
 
 ## where to go from here?
 
-Currently express-device is on version 0.3.1. There are a couple of things that I have in mind to add, such as:
+Currently express-device is on version 0.3.2. There are a couple of things that I have in mind to add, such as:
 - trying to parse the OS from the request
 
 Feel free to add issues with your own ideas or make pull requests (prefered method).
