@@ -34,11 +34,11 @@
           <h1>express-device</h1>
           <p>Browser detection library for node.js, built on top of express</p>
           <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/rguerreiro">rguerreiro</a>&nbsp;<a href="http://travis-ci.org/rguerreiro/express-device"><img src="https://secure.travis-ci.org/rguerreiro/express-device.png?branch=master" alt="Build Status"></a></span>
+          <span class="credits left">Project maintained by <a href="https://github.com/rguerreiro">rguerreiro</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
         </div>
 
-<h2>why express-device?</h2>
+        <h2>why express-device?</h2>
 
 <p>I'm really into node.js and lately I've been playing a lot with it. One of the steps I wanted to take in my learning path was to build a node.js module and published it to npm. </p>
 
@@ -94,7 +94,7 @@
 <td>type</td>
         <td>string</td>
         <td>It gets the device type for the current request</td>
-        <td>desktop, tv, tablet ot phone</td>
+        <td>desktop, tv, tablet, phone or bot</td>
     </tr>
 </table><p>express-device can also add some variables to the response <a href="http://expressjs.com/api.html#res.locals()">locals property</a> that will help you to build a responsive design:</p>
 
@@ -118,6 +118,10 @@
 <tr>
 <td>is_tv</td>
         <td>It returns true in case the device type is "tv"; false otherwise</td>
+    </tr>
+<tr>
+<td>is_bot</td>
+        <td>It returns true in case the device type is "bot"; false otherwise</td>
     </tr>
 <tr>
 <td>device_type</td>
@@ -186,7 +190,7 @@
 <li><a href="https://github.com/aledbf">aledbf</a></li>
 </ul><h2>where to go from here?</h2>
 
-<p>Currently express-device is on version 0.3.0. There are a couple of things that I have in mind to add, such as:</p>
+<p>Currently express-device is on version 0.3.1. There are a couple of things that I have in mind to add, such as:</p>
 
 <ul>
 <li>trying to parse the OS from the request</li>
