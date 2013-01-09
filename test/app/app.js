@@ -7,6 +7,7 @@ app.set('view options', { layout: true });
 app.set('views', __dirname);
 
 app.use(device.capture());
+app.enableDeviceHelpers();
 app.enableViewRouting();
 
 app.get('/', function(req, res, next) {
@@ -35,4 +36,8 @@ app.get('/no-layout2', function(req, res, next) {
 
 app.get('/ignore', function(req, res, next) {
     res.render('index.ejs', { ignoreViewRouting: true });
+});
+
+app.get('/helpers', function(req, res, next) {
+    res.render('index_helpers.ejs', { ignoreViewRouting: true });
 });
