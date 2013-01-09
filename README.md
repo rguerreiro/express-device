@@ -101,6 +101,12 @@ Here's an example on how to use them (using [EJS](https://github.com/visionmedia
     <% if (is_tablet) { %>
     <p>You're using a tablet</p>
     <% } %>
+    <% if (is_tv) { %>
+    <p>You're using a tablet</p>
+    <% } %>
+    <% if (is_bot) { %>
+    <p>You're using a tablet</p>
+    <% } %>
 </body>
 </html>
 ```
@@ -146,12 +152,13 @@ app.get('/', function(req, res) {
 
 ## contributors
 
-- [rguerreiro](https://github.com/rguerreiro)
-- [aledbf](https://github.com/aledbf)
+- [@rguerreiro](https://github.com/rguerreiro)
+- [@aledbf](https://github.com/aledbf)
+- [@ryansully](https://github.com/ryansully)
 
 ## where to go from here?
 
-Currently express-device is on version 0.3.2. There are a couple of things that I have in mind to add, such as:
+Currently express-device is on version 0.3.3. There are a couple of things that I have in mind to add, such as:
 - trying to parse the OS from the request
 
 Feel free to add issues with your own ideas or make pull requests (prefered method).
