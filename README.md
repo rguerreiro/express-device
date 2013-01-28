@@ -51,19 +51,19 @@ By doing this you're enabling the **request** object to have a property called *
     </tr>
 </table>
 
-Since version 0.3.4 you can now override some options when calling device.capture(). It accepts an object with only the config options you which to override. The ones you don't override it will use the default ones. Here's the list with the available config options:
+Since version 0.3.4 you can now override some options when calling **device.capture()**. It accepts an object with only the config options you which to override (go [here](https://github.com/rguerreiro/express-device/blob/master/test/not_default_options_test.js) for some examples). The ones you don't override it will use the default values. Here's the list with the available config options:
 <table>
     <tr><td><strong>Name</strong></td><td><strong>Field Type</strong></td><td><strong>Description</strong></td><td><strong>Possible Values</strong></td></tr>
     <tr>
         <td>emptyUserAgentDeviceType</td>
         <td>string</td>
-        <td>Device type to be returned whenever the request has an empty user-agent</td>
+        <td>Device type to be returned whenever the request has an empty user-agent. Defaults to phone.</td>
         <td>desktop, tv, tablet, phone or bot</td>
     </tr>
 	<tr>
         <td>unknownUserAgentDeviceType</td>
         <td>string</td>
-        <td>Device type to be returned whenever the request user-agent is unknown</td>
+        <td>Device type to be returned whenever the request user-agent is unknown. Defaults to desktop.</td>
         <td>desktop, tv, tablet, phone or bot</td>
     </tr>
 </table>
