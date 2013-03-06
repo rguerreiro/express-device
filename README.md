@@ -173,6 +173,7 @@ app.get('/', function(req, res) {
 - [@aledbf](https://github.com/aledbf)
 - [@ryansully](https://github.com/ryansully)
 - [@lyxsus](https://github.com/lyxsus)
+- [@dsyph3r](https://github.com/dsyph3r)
 
 ## where to go from here?
 
