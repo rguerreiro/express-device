@@ -500,4 +500,10 @@ describe('device', function() {
             assert.equal(parser.get_type(), 'desktop');
         });
     });
+    describe('84.Chromebook OS',function(){
+        it('should get device type desktop', function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Mozilla/5.0 (X11; CrOS i686 0.12.433) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.77 Safari/534.30' } });
+            assert.equal(parser.get_type(), 'desktop');
+        });
+    });
 });
