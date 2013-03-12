@@ -66,6 +66,12 @@ Since version 0.3.4 you can now override some options when calling **device.capt
         <td>Device type to be returned whenever the request user-agent is unknown. Defaults to desktop.</td>
         <td>desktop, tv, tablet, phone or bot</td>
     </tr>
+    <tr>
+        <td>botUserAgentDeviceType</td>
+        <td>string</td>
+        <td>Device type to be returned whenever the request user-agent belongs to a bot. Defaults to bot.</td>
+        <td>desktop, tv, tablet, phone or bot</td>
+    </tr>
 </table>
 
 express-device can also add some variables to the response [locals property](http://expressjs.com/api.html#res.locals\(\)) that will help you to build a responsive design:
