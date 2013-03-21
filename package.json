@@ -9,7 +9,7 @@
     "engines": { "node": "*" },
     "dependencies": {
         "express": ">=3.0.0",
-        "express-partials": "git://github.com/publicclass/express-partials.git#e7829e84c88770fc5660a30939895e4a5b031ba1"
+        "express-partials": ">=0.1.1"
     },
     "devDependencies": {
         "ejs": "*",
