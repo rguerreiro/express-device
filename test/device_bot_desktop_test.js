@@ -2198,4 +2198,10 @@ describe('device', function() {
             assert.equal(parser.get_type(), 'bot');
         });
     });
+    describe('367.Facebook 1.1',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
 });
