@@ -173,6 +173,27 @@ app.get('/', function(req, res) {
 })
 ```
 
+ViewRouting feature using **express-partials** for layout detectiong, so you can turn it off using **noPartials** option
+```javascript
+app.configure(function(){
+    app.set('view engine', 'ejs');
+    app.set('view options', { layout: true });
+    app.set('views', __dirname + '/views');
+    
+    app.use(express.bodyParser());
+    app.use(device.capture());
+
+    app.enableViewRouting({
+    	"noPartials":true
+    });
+});
+
+app.get('/', function(req, res) {
+    res.render('index.ejs');
+})
+```
+
+
 ## contributors
 
 - [@rguerreiro](https://github.com/rguerreiro)
