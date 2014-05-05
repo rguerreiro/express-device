@@ -173,7 +173,7 @@ app.get('/', function(req, res) {
 })
 ```
 
-ViewRouting feature using **express-partials** for layout detectiong, so you can turn it off using **noPartials** option
+View routing feature uses the **express-partials** module for layout detection. If you would like to turn it off, you can use the **noPartials** option (be advised that by doing this you no longer can use the view routing feature):
 ```javascript
 app.configure(function(){
     app.set('view engine', 'ejs');
@@ -205,7 +205,7 @@ app.get('/', function(req, res) {
 
 ## where to go from here?
 
-Currently express-device is on version 0.3.7. There are a couple of things that I have in mind to add, such as:
+Currently express-device is on version 0.3.8. There are a couple of things that I have in mind to add, such as:
 - trying to parse the OS from the request
 
 Feel free to add issues with your own ideas or make pull requests (prefered method).
