@@ -7,7 +7,7 @@ describe('app',function(){
   		request(app)
       .get('/')
       .expect(200)
-      .expect('<html><head><title>express-device</title></head><body><h1>index</h1></body></html>')
+      .expect('<html><head><title>express-device for phone</title></head><body><h1>index</h1></body></html>')
       .end(done);
   	});
 	});
@@ -137,7 +137,7 @@ describe('app',function(){
   		request(app)
       .get('/custom-layout')
       .expect(200)
-      .expect('<html><head><title>custom</title></head><body><h1>index</h1></body></html>')
+      .expect('<html><head><title>custom phone</title></head><body><h1>index</h1></body></html>')
       .end(done);
   	});
 	});

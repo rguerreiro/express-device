@@ -58,11 +58,11 @@ describe('app',function(){
 	});
 
 	describe('GET /helpers without partials',function(){
-  	it('should render html and show desktop string',function(done){
+  	it('should render html and show phone string',function(done){
   		request(app)
 	      .get('/helpers')
 	      .expect(200)
-	      .expect('<html><head><title>express-device</title></head><body><p>desktop</p></body></html>')
+	      .expect('<html><head><title>express-device</title></head><body><p>phone</p></body></html>')
 	      .end(done);
   	});
 	});
