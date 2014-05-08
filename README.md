@@ -1,4 +1,4 @@
-# express-device [![Build Status](https://secure.travis-ci.org/rguerreiro/express-device.png?branch=master)](http://travis-ci.org/rguerreiro/express-device)
+# express-device [![Build Status](https://secure.travis-ci.org/rguerreiro/express-device.png?branch=master)](http://travis-ci.org/rguerreiro/express-device) [![NPM version](https://badge.fury.io/js/express-device.svg)](http://badge.fury.io/js/express-device)
 
 ## why express-device?
 
