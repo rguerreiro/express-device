@@ -173,7 +173,7 @@ app.get('/', function(req, res) {
 })
 ```
 
-View routing feature uses the **express-partials** module for layout detection. If you would like to turn it off, you can use the **noPartials** option (be advised that by doing this you no longer can use the view routing feature):
+View routing feature uses the **express-partials** module for layout detection. If you would like to turn it off, you can use the **noPartials** option (be advised that by doing this you can no longer use the master\partial layout built into express-device, but you can route to full views):
 ```javascript
 app.configure(function(){
     app.set('view engine', 'ejs');
