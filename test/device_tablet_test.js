@@ -980,4 +980,10 @@ describe('device', function() {
             assert.equal(parser.get_type(), 'tablet');
         });
     });
+    describe('164.Amazon Kindle Fire',function(){
+        it('should get device type tablet', function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Mozilla/5.0 (Linux; U; en-us; KFJWI Build/IMM76D) AppleWebKit/535.19 (KHTML, like Gecko) Silk/3.10 Safari/535.19 Silk-Accelerated=true' } });
+            assert.equal(parser.get_type(), 'tablet');
+        });
+    });
 });
