@@ -202,10 +202,11 @@ app.get('/', function(req, res) {
 - [@lyxsus](https://github.com/lyxsus)
 - [@dsyph3r](https://github.com/dsyph3r)
 - [@davo11122](https://github.com/davo11122)
+- [@esco](https://github.com/esco)
 
 ## where to go from here?
 
-Currently express-device is on version 0.3.9. There are a couple of things that I have in mind to add, such as:
+Currently express-device is on version 0.3.10. There are a couple of things that I have in mind to add, such as:
 - trying to parse the OS from the request
 
 Feel free to add issues with your own ideas or make pull requests (prefered method).

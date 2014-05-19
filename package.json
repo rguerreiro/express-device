@@ -3,7 +3,7 @@
     "author": "Rodrigo Guerreiro (@rguerreiro)",
     "description": "Browser detection library, built on top of express",
     "keywords": ["browser", "mobile", "detection", "user-agent", "express", "layout", "view routing", "desktop", "phone", "tablet", "tv", "bot", "responsive design"],
-    "version": "0.3.9",
+    "version": "0.3.10",
     "main": "./index.js",
     "private": false,
     "engines": { "node": "*" },
