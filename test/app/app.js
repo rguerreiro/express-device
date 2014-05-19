@@ -7,8 +7,8 @@ app.set('view options', { layout: true });
 app.set('views', __dirname);
 
 app.use(device.capture());
-app.enableDeviceHelpers();
-app.enableViewRouting();
+device.enableDeviceHelpers(app);
+device.enableViewRouting(app);
 
 app.get('/', function(req, res, next) {
     res.render('index.ejs');

@@ -1,6 +1,6 @@
 var express = require('express'),
     device  = require('../');
-    
+
 var app = express();
 var port = process.env.PORT || 3000;
 
@@ -8,14 +8,14 @@ app.configure(function(){
     app.set('view engine', 'ejs');
     app.set('view options', { layout: true });
     app.set('views', __dirname + '/views');
-    
+
     app.use(express.bodyParser());
     app.use(express.methodOverride());
     app.use(express.cookieParser());
     app.use(device.capture());
-    
-    app.enableDeviceHelpers();
-    app.enableViewRouting();
+
+    device.enableDeviceHelpers(app);
+    device.enableViewRouting(app);
 
     app.use(app.router);
 });

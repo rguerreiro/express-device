@@ -2,7 +2,7 @@
 
 ## why express-device?
 
-I'm really into node.js and lately I've been playing a lot with it. One of the steps I wanted to take in my learning path was to build a node.js module and published it to npm. 
+I'm really into node.js and lately I've been playing a lot with it. One of the steps I wanted to take in my learning path was to build a node.js module and published it to npm.
 
 Then I had an idea: why not develop a server side library to mimic the behaviour that Twitter's [Bootstrap](http://twitter.github.com/bootstrap/scaffolding.html#responsive) has in order to identify where a browser is running on a desktop, tablet or phone. This is great for a [responsive design](http://en.wikipedia.org/wiki/Responsive_Web_Design), but on the server side.
 
@@ -21,11 +21,11 @@ But then I came across with Brett Jankord's [blog](http://www.brettjankord.com).
 ## how to use it?
 
 To install it you only need to do:
- 
+
     $ npm install express-device
-    
+
 Case you're using [express](http://expressjs.com/) 2.x.x you should install version 0.1.2:
- 
+
     $ npm install express-device@0.1.2
 
 express-device is built on top of [express](http://expressjs.com/) framework. Here's an example on how to configure express to use it:
@@ -35,7 +35,7 @@ app.configure(function(){
     app.set('view engine', 'ejs');
     app.set('view options', { layout: false });
     app.set('views', __dirname + '/views');
-    
+
     app.use(express.bodyParser());
     app.use(device.capture());
 });
@@ -105,7 +105,7 @@ express-device can also add some variables to the response [locals property](htt
         <td>It returns the device type string parsed from the request</td>
     </tr>
 </table>
-In order to enable this methods you have to call **app.enableDeviceHelpers()**, just before **app.use(app.router)**.
+In order to enable this method you have to pass the app reference to **device.enableDeviceHelpers(app)**, just before **app.use(app.router)**.
 
 Here's an example on how to use them (using [EJS](https://github.com/visionmedia/ejs) view engine):
 ```html
@@ -136,7 +136,7 @@ Here's an example on how to use them (using [EJS](https://github.com/visionmedia
 
 You can check a full working example [here](https://github.com/rguerreiro/express-device/tree/master/example).
 
-In version 0.3.0 a cool feature was added: the ability to route to a specific view\layout based on the device type (must call the **app.enableViewRouting()** to set it up). Consider the code below:
+In version 0.3.0 a cool feature was added: the ability to route to a specific view\layout based on the device type (you must pass the app reference to **.device.enableViewRouting(app)** to set it up). Consider the code below:
 
     .
     |-- views
@@ -152,11 +152,11 @@ app.configure(function(){
     app.set('view engine', 'ejs');
     app.set('view options', { layout: true });
     app.set('views', __dirname + '/views');
-    
+
     app.use(express.bodyParser());
     app.use(device.capture());
 
-    app.enableViewRouting();
+    device.enableViewRouting(app);
 });
 
 app.get('/', function(req, res) {
@@ -179,11 +179,11 @@ app.configure(function(){
     app.set('view engine', 'ejs');
     app.set('view options', { layout: true });
     app.set('views', __dirname + '/views');
-    
+
     app.use(express.bodyParser());
     app.use(device.capture());
 
-    app.enableViewRouting({
+    device.enableViewRouting(app, {
     	"noPartials":true
     });
 });
