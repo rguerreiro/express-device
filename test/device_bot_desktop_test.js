@@ -2204,4 +2204,22 @@ describe('device', function() {
             assert.equal(parser.get_type(), 'bot');
         });
     });
+    describe('LinkedInBot/1.0',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'LinkedInBot/1.0 (compatible; Mozilla/5.0; Jakarta Commons-HttpClient/3.1 +http://www.linkedin.com)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('msnbot-media',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'msnbot-media/1.1 (+http://search.msn.com/msnbot.htm)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('QuerySeekerSpider',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'QuerySeekerSpider ( http://queryseeker.com/bot.html )' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
 });
