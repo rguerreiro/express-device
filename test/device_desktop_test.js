@@ -506,4 +506,10 @@ describe('device', function() {
             assert.equal(parser.get_type(), 'desktop');
         });
     });
+    describe('85.CloudFront',function(){
+        it('should get device type desktop', function(){
+            var parser = new device.Parser({ headers: { 'cloudfront-is-desktop-viewer': 'true' } });
+            assert.equal(parser.get_type(), 'desktop');
+        });
+    });
 });

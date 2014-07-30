@@ -986,4 +986,10 @@ describe('device', function() {
             assert.equal(parser.get_type(), 'tablet');
         });
     });
+    describe('165.CloudFront',function(){
+        it('should get device type tablet', function(){
+            var parser = new device.Parser({ headers: { 'cloudfront-is-tablet-viewer': 'true' } });
+            assert.equal(parser.get_type(), 'tablet');
+        });
+    });
 });
