@@ -208,7 +208,7 @@ app.get('/', function(req, res) {
 
 ## where to go from here?
 
-Currently express-device is on version 0.3.10. There are a couple of things that I have in mind to add, such as:
+Currently express-device is on version 0.3.11. There are a couple of things that I have in mind to add, such as:
 - trying to parse the OS from the request
 
 Feel free to add issues with your own ideas or make pull requests (prefered method).
