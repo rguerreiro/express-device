@@ -1772,4 +1772,10 @@ describe('device', function() {
             assert.equal(parser.get_type(), 'phone');
         });
     });
+    describe('10296.CloudFront',function(){
+        it('should get device type phone', function(){
+            var parser = new device.Parser({ headers: { 'cloudfront-is-mobile-viewer': 'true' } });
+            assert.equal(parser.get_type(), 'phone');
+        });
+    });
 });
