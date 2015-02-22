@@ -31,6 +31,7 @@ Case you're using [express](http://expressjs.com/) 2.x.x you should install vers
 express-device is built on top of [express](http://expressjs.com/) framework. Here's an example on how to configure express to use it:
 
 ```javascript
+var device = require('express-device');
 app.configure(function(){
     app.set('view engine', 'ejs');
     app.set('view options', { layout: false });
