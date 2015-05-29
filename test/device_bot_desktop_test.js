@@ -2312,4 +2312,10 @@ describe('device', function() {
             assert.equal(parser.get_type(), 'bot');
         });
     });
+    describe('Simple Reach',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'simplereach/1.1 ( http://simplereach.com/docs/agent)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
 });
