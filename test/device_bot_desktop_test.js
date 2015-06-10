@@ -2318,4 +2318,22 @@ describe('device', function() {
             assert.equal(parser.get_type(), 'bot');
         });
     });
+    describe('HTMLParser',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'HTMLParser/2.0' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('FlipboardProxy',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:28.0) Gecko/20100101 Firefox/28.0 (FlipboardProxy/1.1;  http://flipboard.com/browserproxy)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('Go package',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Go 1.1 package' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
 });
