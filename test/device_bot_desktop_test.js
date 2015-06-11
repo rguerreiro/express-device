@@ -2342,4 +2342,16 @@ describe('device', function() {
             assert.equal(parser.get_type(), 'bot');
         });
     });
+    describe('Jack',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'jack' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('Obscure Mozilla one',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Mozilla/5.0 ()' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
 });
