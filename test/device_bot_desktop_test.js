@@ -2354,4 +2354,10 @@ describe('device', function() {
             assert.equal(parser.get_type(), 'bot');
         });
     });
+    describe('Facebot Full site crawler',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Facebot' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
 });
