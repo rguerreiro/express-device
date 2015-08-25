@@ -31,6 +31,7 @@ Case you're using [express](http://expressjs.com/) 2.x.x you should install vers
 express-device is built on top of [express](http://expressjs.com/) framework. Here's an example on how to configure express to use it:
 
 ```javascript
+var device = require('express-device');
 app.configure(function(){
     app.set('view engine', 'ejs');
     app.set('view options', { layout: false });
@@ -148,6 +149,7 @@ In version 0.3.0 a cool feature was added: the ability to route to a specific vi
 
 And this code:
 ```javascript
+var device = require('express-device');
 app.configure(function(){
     app.set('view engine', 'ejs');
     app.set('view options', { layout: true });
@@ -175,6 +177,7 @@ app.get('/', function(req, res) {
 
 View routing feature uses the **express-partials** module for layout detection. If you would like to turn it off, you can use the **noPartials** option (be advised that by doing this you can no longer use the master\partial layout built into express-device, but you can route to full views):
 ```javascript
+var device = require('express-device'); 
 app.configure(function(){
     app.set('view engine', 'ejs');
     app.set('view options', { layout: true });
@@ -205,6 +208,7 @@ app.get('/', function(req, res) {
 - [@esco](https://github.com/esco)
 - [@Saicheg](https://github.com/Saicheg)
 - [@brycekahle](https://github.com/brycekahle)
+- [@manjeshpv](https://github.com/manjeshpv)
 
 ## where to go from here?
 
