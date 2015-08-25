@@ -57,13 +57,13 @@ Since version 0.3.4 you can now override some options when calling **device.capt
     <tr>
         <td>emptyUserAgentDeviceType</td>
         <td>string</td>
-        <td>Device type to be returned whenever the request has an empty user-agent. Defaults to phone.</td>
+        <td>Device type to be returned whenever the request has an empty user-agent. Defaults to desktop.</td>
         <td>desktop, tv, tablet, phone or bot</td>
     </tr>
 	<tr>
         <td>unknownUserAgentDeviceType</td>
         <td>string</td>
-        <td>Device type to be returned whenever the request user-agent is unknown. Defaults to desktop.</td>
+        <td>Device type to be returned whenever the request user-agent is unknown. Defaults to phone.</td>
         <td>desktop, tv, tablet, phone or bot</td>
     </tr>
     <tr>
