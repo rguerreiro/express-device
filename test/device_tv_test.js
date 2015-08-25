@@ -158,4 +158,10 @@ describe('device', function() {
             assert.equal(parser.get_type(), 'tv');
         });
     });
+    describe('27.HbbTV smart tv', function () {
+        it('should get device type tv', function () {
+            var parser = new device.Parser({ headers: { 'user-agent': 'Opera/9.80 (Linux armv7l; HbbTV/1.1.1 (; Sony; KDL32W655A; PKG3.802EUA; 2013;); ) Presto/2.12.362 Version/12.11' } });
+            assert.equal(parser.get_type(), 'tv');
+        });
+    });
 });
