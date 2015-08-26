@@ -2222,4 +2222,142 @@ describe('device', function() {
             assert.equal(parser.get_type(), 'bot');
         });
     });
+    describe('Google HTTP Client library',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Google-HTTP-Java-Client/1.17.0-rc (gzip)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('InAGist URL Resolver',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'InAGist URL Resolver (http://inagist.com)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('Jakarta Commons-HttpClient',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Jakarta Commons-HttpClient/3.0.1' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('Java Client',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Java/1.7.0_75' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('Kimengi nineconnections.com',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Kimengi/nineconnections.com' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('MetaURI',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'MetaURI API/2.0 +metauri.com' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('ShowyouBot',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'ShowyouBot (http://showyou.com/crawler)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('Python',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'python-requests/2.5.1 CPython/2.7.9 Linux/3.10.23-xxxx-std-ipv6-64' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('Moz.com',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'rogerbot/1.0 (http://moz.com/help/pro/what-is-rogerbot-, rogerbot-crawler+shiny@moz.com)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('OpenHoseBot',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Mozilla/5.0 (compatible; OpenHoseBot/2.1; http://www.openhose.org/bot.html)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('PaperLiBot',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Mozilla/5.0 (compatible; PaperLiBot/2.1; http://support.paper.li/entries/20023257-what-is-paper-li)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('uMBot',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Mozilla/5.0 (compatible; uMBot-LN/1.0; mailto: crawling@ubermetrics-technologies.com)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('Yahoo! Slurp',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('Kraken',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Mozilla/5.0 (compatible; Kraken/0.1; http://linkfluence.net/; bot@linkfluence.net)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('EveryoneSocialBot',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Mozilla/5.0 (compatible; EveryoneSocialBot/1.0; support@everyonesocial.com http://everyonesocial.com/)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('Simple Reach',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'simplereach/1.1 ( http://simplereach.com/docs/agent)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('HTMLParser',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'HTMLParser/2.0' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('FlipboardProxy',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:28.0) Gecko/20100101 Firefox/28.0 (FlipboardProxy/1.1;  http://flipboard.com/browserproxy)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('Go package',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Go 1.1 package' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('Apple Bot',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5 (Applebot/0.1;  http://www.apple.com/go/applebot)' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('Jack',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'jack' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('Obscure Mozilla one',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Mozilla/5.0 ()' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
+    describe('Facebot Full site crawler',function(){
+        it('should get device type bot',function(){
+            var parser = new device.Parser({ headers: { 'user-agent': 'Facebot' } });
+            assert.equal(parser.get_type(), 'bot');
+        });
+    });
 });
