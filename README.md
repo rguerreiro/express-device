@@ -209,13 +209,13 @@ app.get('/', function(req, res) {
 - [@Saicheg](https://github.com/Saicheg)
 - [@brycekahle](https://github.com/brycekahle)
 - [@manjeshpv](https://github.com/manjeshpv)
+- [@Sitebase](https://github.com/Sitebase)
 
 ## where to go from here?
 
-Currently express-device is on version 0.3.11. There are a couple of things that I have in mind to add, such as:
-- trying to parse the OS from the request
+Currently express-device is on **version 0.3.13**. In order to add more features I'm asking anyone to contribute with some ideas. If you have some of your own please feel free to mention it [here](https://github.com/rguerreiro/express-device/issues/26).
 
-Feel free to add issues with your own ideas or make pull requests (prefered method).
+But I prefer that you make your contribution with some pull requests ;)
 
 ## license
 
