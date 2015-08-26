@@ -137,7 +137,7 @@ Here's an example on how to use them (using [EJS](https://github.com/visionmedia
 
 You can check a full working example [here](https://github.com/rguerreiro/express-device/tree/master/example).
 
-In version 0.3.0 a cool feature was added: the ability to route to a specific view\layout based on the device type (you must pass the app reference to **.device.enableViewRouting(app)** to set it up). Consider the code below:
+In version 0.3.0 a cool feature was added: the ability to route to a specific view\layout based on the device type (you must pass the app reference to **device.enableViewRouting(app)** to set it up). Consider the code below:
 
     .
     |-- views
