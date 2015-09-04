@@ -6,7 +6,7 @@
   "version": "0.4.0",
   "main": "./index.js",
   "private": false,
-  "engines": { "node": "*" },
+  "engines": { "node": ">=0.10" },
   "dependencies": {
     "express": "4.x.x",
     "express-partials": "0.3.0"
@@ -19,8 +19,11 @@
     "mocha": "*",
     "supertest": "*"
   },
-    "scripts": {
-        "test": "mocha"
-    },
-    "repository": "git://github.com/rguerreiro/express-device"
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rguerreiro/express-device.git"
+  }
 }

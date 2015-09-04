@@ -20,7 +20,7 @@ But then I came across with Brett Jankord's [blog](http://www.brettjankord.com).
 
 ## how to use it?
 
-To install it you only need to do:
+From v0.4.0 express-device only works with [express](http://expressjs.com/) >= v4.x.x and [node](https://nodejs.org) >= v0.10. To install it you only need to do:
 
     $ npm install express-device
 
@@ -217,7 +217,7 @@ app.get('/', function(req, res) {
 
 ## where to go from here?
 
-Currently express-device is on **version 0.3.13**. In order to add more features I'm asking anyone to contribute with some ideas. If you have some of your own please feel free to mention it [here](https://github.com/rguerreiro/express-device/issues/26).
+Currently express-device is on **version 0.4.0**. In order to add more features I'm asking anyone to contribute with some ideas. If you have some of your own please feel free to mention it [here](https://github.com/rguerreiro/express-device/issues/26).
 
 But I prefer that you make your contribution with some pull requests ;)
 
