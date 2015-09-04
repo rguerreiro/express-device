@@ -193,6 +193,13 @@ app.get('/', function(req, res) {
 })
 ```
 
+There's a way to force a certain type of device in a specific request. In the example I'm forcing a **desktop** type and the view rendering engine will ignore the parsed type and render as if it was a **desktop** that made the request. You can use all the supported device types.
+```javascript
+app.get('/', function(req, res) {
+    res.render('index.ejs', { forceType: 'desktop' });
+})
+```
+
 View routing feature uses the **express-partials** module for layout detection. If you would like to turn it off, you can use the **noPartials** option (be advised that by doing this you can no longer use the master\partial layout built into express-device, but you can route to full views):
 ```javascript
 var device = require('express-device'); 

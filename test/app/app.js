@@ -38,6 +38,14 @@ app.get('/ignore', function(req, res, next) {
     res.render('index.ejs', { ignoreViewRouting: true });
 });
 
+app.get('/force-desktop', function (req, res, next) {
+    res.render('index.ejs', { forceType: 'desktop' });
+});
+
+app.get('/force-tv', function (req, res, next) {
+    res.render('index2.ejs', { forceType: 'tv' });
+});
+
 app.get('/helpers', function(req, res, next) {
     res.render('index_helpers.ejs', { ignoreViewRouting: true });
 });

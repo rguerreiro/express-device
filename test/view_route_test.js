@@ -163,4 +163,48 @@ describe('app', function () {
                 .end(done);
         });
     });
+
+    describe('GET /force-desktop from phone', function () {
+        it('should render with default layout for desktop', function (done) {
+            request(app)
+                .get('/force-desktop')
+                .set('User-Agent', 'iPhone')
+                .expect(200)
+                .expect('<html><head><title>express-device</title></head><body><h1>index</h1></body></html>')
+                .end(done);
+        });
+    });
+
+    describe('GET /force-desktop from tablet', function () {
+        it('should render with default layout for desktop', function (done) {
+            request(app)
+                .get('/force-desktop')
+                .set('User-Agent', 'iPad')
+                .expect(200)
+                .expect('<html><head><title>express-device</title></head><body><h1>index</h1></body></html>')
+                .end(done);
+        });
+    });
+
+    describe('GET /force-tv from phone', function () {
+        it('should render with default layout for tv', function (done) {
+            request(app)
+                .get('/force-tv')
+                .set('User-Agent', 'iPhone')
+                .expect(200)
+                .expect('<html><head><title>express-device for tv</title></head><body><h1>tv</h1></body></html>')
+                .end(done);
+        });
+    });
+    
+    describe('GET /force-tv from tablet', function () {
+        it('should render with default layout for tv', function (done) {
+            request(app)
+                .get('/force-tv')
+                .set('User-Agent', 'iPad')
+                .expect(200)
+                .expect('<html><head><title>express-device for tv</title></head><body><h1>tv</h1></body></html>')
+                .end(done);
+        });
+    });
 });
