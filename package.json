@@ -22,6 +22,7 @@
   "scripts": {
     "test": "mocha"
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/rguerreiro/express-device.git"
