@@ -85,7 +85,7 @@ Since version 0.3.4 you can now override some options when calling **device.capt
     <tr>
         <td>parseUserAgent</td>
         <td>string</td>
-        <td>Configuration to parse the user-agent string using the [useragent](https://www.npmjs.com/package/useragent) npm package. It's needed in order to get the device name. Defaults to false.</td>
+        <td>Configuration to parse the user-agent string using the <a href="https://www.npmjs.com/package/useragent">useragent</a> npm package. It's needed in order to get the device name. Defaults to false.</td>
         <td>true | false</td>
     </tr>
 </table>
