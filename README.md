@@ -24,6 +24,10 @@ To install it you only need to do:
 
     $ npm install express-device
 
+Case you're using [express](http://expressjs.com/) 3.x.x you should install version 0.3.13:
+
+    $ npm install express-device@0.3.13
+
 Case you're using [express](http://expressjs.com/) 2.x.x you should install version 0.1.2:
 
     $ npm install express-device@0.1.2
