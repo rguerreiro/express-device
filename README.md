@@ -22,13 +22,9 @@ But then I came across with Brett Jankord's [blog](http://www.brettjankord.com).
 
 To install it you only need to do:
 
-    $ npm install express-device
+    $ npm install express-device@0.3.13
 
-Case you're using [express](http://expressjs.com/) 2.x.x you should install version 0.1.2:
-
-    $ npm install express-device@0.1.2
-
-express-device is built on top of [express](http://expressjs.com/) framework. Here's an example on how to configure express to use it:
+express-device is built on top of [express](http://expressjs.com/) framework v3.x.x. Here's an example on how to configure express to use it:
 
 ```javascript
 var device = require('express-device');
@@ -213,7 +209,7 @@ app.get('/', function(req, res) {
 
 ## where to go from here?
 
-Currently express-device is on **version 0.3.13**. In order to add more features I'm asking anyone to contribute with some ideas. If you have some of your own please feel free to mention it [here](https://github.com/rguerreiro/express-device/issues/26).
+In order to add more features I'm asking anyone to contribute with some ideas. If you have some of your own please feel free to mention it [here](https://github.com/rguerreiro/express-device/issues/26).
 
 But I prefer that you make your contribution with some pull requests ;)
 
