@@ -1,25 +1,26 @@
 var express = require('express'),
-    device  = require('../');
+    device = require('../'),
+    bodyParser = require('body-parser'),
+    methodOverride = require('method-override'),
+    cookieParser = require('cookie-parser');
 
 var app = express();
 var port = process.env.PORT || 3000;
 
-app.configure(function(){
-    app.set('view engine', 'ejs');
-    app.set('view options', { layout: true });
-    app.set('views', __dirname + '/views');
+// configuring...
+app.set('view engine', 'ejs');
+app.set('view options', { layout: true });
+app.set('views', __dirname + '/views');
 
-    app.use(express.bodyParser());
-    app.use(express.methodOverride());
-    app.use(express.cookieParser());
-    app.use(device.capture());
+app.use(bodyParser());
+app.use(methodOverride());
+app.use(cookieParser());
+app.use(device.capture());
 
-    device.enableDeviceHelpers(app);
-    device.enableViewRouting(app);
+device.enableDeviceHelpers(app);
+device.enableViewRouting(app);
 
-    app.use(app.router);
-});
-
+// routes...
 app.get('/', function(req, res) {
     res.render('index', { title: 'Testing express-device', layout: false });
 });
