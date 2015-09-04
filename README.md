@@ -36,14 +36,13 @@ express-device is built on top of [express](http://expressjs.com/) framework. He
 
 ```javascript
 var device = require('express-device');
-app.configure(function(){
-    app.set('view engine', 'ejs');
-    app.set('view options', { layout: false });
-    app.set('views', __dirname + '/views');
 
-    app.use(express.bodyParser());
-    app.use(device.capture());
-});
+app.set('view engine', 'ejs');
+app.set('view options', { layout: false });
+app.set('views', __dirname + '/views');
+
+app.use(bodyParser());
+app.use(device.capture());
 ```
 By doing this you're enabling the **request** object to have a property called **device**, which have the following properties:
 <table>
@@ -53,6 +52,12 @@ By doing this you're enabling the **request** object to have a property called *
         <td>string</td>
         <td>It gets the device type for the current request</td>
         <td>desktop, tv, tablet, phone or bot</td>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>It gets the device name for the current request</td>
+        <td>Example: iPhone. If the option **parseUserAgent** is set to false, then it will return an empty string</td>
     </tr>
 </table>
 
@@ -76,6 +81,12 @@ Since version 0.3.4 you can now override some options when calling **device.capt
         <td>string</td>
         <td>Device type to be returned whenever the request user-agent belongs to a bot. Defaults to bot.</td>
         <td>desktop, tv, tablet, phone or bot</td>
+    </tr>
+    <tr>
+        <td>parseUserAgent</td>
+        <td>string</td>
+        <td>Configuration to parse the user-agent string using the [useragent](https://www.npmjs.com/package/useragent) npm package. It's needed in order to get the device name. Defaults to false.</td>
+        <td>true | false</td>
     </tr>
 </table>
 
@@ -108,6 +119,10 @@ express-device can also add some variables to the response [locals property](htt
     <tr>
         <td>device_type</td>
         <td>It returns the device type string parsed from the request</td>
+    </tr>
+    <tr>
+        <td>device_name</td>
+        <td>It returns the device name string parsed from the request</td>
     </tr>
 </table>
 In order to enable this method you have to pass the app reference to **device.enableDeviceHelpers(app)**, just before **app.use(app.router)**.
@@ -154,16 +169,15 @@ In version 0.3.0 a cool feature was added: the ability to route to a specific vi
 And this code:
 ```javascript
 var device = require('express-device');
-app.configure(function(){
-    app.set('view engine', 'ejs');
-    app.set('view options', { layout: true });
-    app.set('views', __dirname + '/views');
 
-    app.use(express.bodyParser());
-    app.use(device.capture());
+app.set('view engine', 'ejs');
+app.set('view options', { layout: true });
+app.set('views', __dirname + '/views');
 
-    device.enableViewRouting(app);
-});
+app.use(bodyParser());
+app.use(device.capture());
+
+device.enableViewRouting(app);
 
 app.get('/', function(req, res) {
     res.render('index.ejs');
@@ -182,17 +196,16 @@ app.get('/', function(req, res) {
 View routing feature uses the **express-partials** module for layout detection. If you would like to turn it off, you can use the **noPartials** option (be advised that by doing this you can no longer use the master\partial layout built into express-device, but you can route to full views):
 ```javascript
 var device = require('express-device'); 
-app.configure(function(){
-    app.set('view engine', 'ejs');
-    app.set('view options', { layout: true });
-    app.set('views', __dirname + '/views');
 
-    app.use(express.bodyParser());
-    app.use(device.capture());
+app.set('view engine', 'ejs');
+app.set('view options', { layout: true });
+app.set('views', __dirname + '/views');
 
-    device.enableViewRouting(app, {
-    	"noPartials":true
-    });
+app.use(express.bodyParser());
+app.use(device.capture());
+
+device.enableViewRouting(app, {
+    "noPartials":true
 });
 
 app.get('/', function(req, res) {
@@ -217,7 +230,7 @@ app.get('/', function(req, res) {
 
 ## where to go from here?
 
-Currently express-device is on **version 0.4.0**. In order to add more features I'm asking anyone to contribute with some ideas. If you have some of your own please feel free to mention it [here](https://github.com/rguerreiro/express-device/issues/26).
+Currently express-device is on **version 0.4.1**. In order to add more features I'm asking anyone to contribute with some ideas. If you have some of your own please feel free to mention it [here](https://github.com/rguerreiro/express-device/issues/26).
 
 But I prefer that you make your contribution with some pull requests ;)
 
@@ -225,7 +238,7 @@ But I prefer that you make your contribution with some pull requests ;)
 
 (The MIT License)
 
-Copyright (c) 2012 Rodrigo Guerreiro
+Copyright (c) 2015 Rodrigo Guerreiro
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

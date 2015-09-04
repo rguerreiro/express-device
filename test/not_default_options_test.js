@@ -113,4 +113,18 @@ describe('device', function() {
             assert.equal(parser.get_type(), 'tv');
         })
     });
+
+    describe('with user-agent of google nexus 10 and parse enabled', function () {
+        it('should get nexus 10 as device name', function () {
+            var parser = new device.Parser({ headers: { 'user-agent': 'Mozilla/5.0 (Linux; Android 4.3; Nexus 10 Build/JSS15Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2307.2 Safari/537.36' } }, { parseUserAgent: true });
+            assert.equal(parser.get_name(), 'Asus Nexus 10');
+        })
+    });
+
+    describe('with user-agent of google nexus 10 and parse disabled', function () {
+        it('should get empty string as device name', function () {
+            var parser = new device.Parser({ headers: { 'user-agent': 'Mozilla/5.0 (Linux; Android 4.3; Nexus 10 Build/JSS15Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2307.2 Safari/537.36' } }, { parseUserAgent: false });
+            assert.equal(parser.get_name(), '');
+        })
+    });
 });
