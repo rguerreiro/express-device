@@ -57,7 +57,7 @@ By doing this you're enabling the **request** object to have a property called *
         <td>name</td>
         <td>string</td>
         <td>It gets the device name for the current request</td>
-        <td>Example: iPhone. If the option **parseUserAgent** is set to false, then it will return an empty string</td>
+        <td>Example: iPhone. If the option <strong>parseUserAgent</strong> is set to false, then it will return an empty string</td>
     </tr>
 </table>
 
