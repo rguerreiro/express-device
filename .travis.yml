@@ -9,3 +9,5 @@ node_js:
 notifications:
   email:
     - 6speedpt@gmail.com
+
+sudo: false
