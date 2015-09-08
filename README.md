@@ -234,6 +234,7 @@ app.get('/', function(req, res) {
 - [@brycekahle](https://github.com/brycekahle)
 - [@manjeshpv](https://github.com/manjeshpv)
 - [@Sitebase](https://github.com/Sitebase)
+- [@lennym](https://github.com/lennym)
 
 ## where to go from here?
 
