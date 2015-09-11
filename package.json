@@ -2,32 +2,16 @@
   "name": "express-device",
   "author": "Rodrigo Guerreiro (@rguerreiro)",
   "description": "Browser detection library, built on top of express",
-  "keywords": [
-    "browser",
-    "mobile",
-    "detection",
-    "user-agent",
-    "useragent",
-    "express",
-    "layout",
-    "view routing",
-    "desktop",
-    "phone",
-    "tablet",
-    "tv",
-    "bot",
-    "responsive design",
-    "parsing"
-  ],
-  "version": "0.4.1",
+  "keywords": ["browser","mobile","detection","user-agent","useragent","express","layout","view routing","desktop","phone","tablet","tv","bot","responsive design","parsing"],
+  "version": "0.4.2",
   "main": "./index.js",
   "private": false,
   "engines": {
     "node": ">=0.10"
   },
   "dependencies": {
-    "express-partials": "0.3.0",
-    "useragent": "*"
+    "device": "*",
+    "express-partials": "0.3.0"
   },
   "devDependencies": {
     "body-parser": "*",

@@ -1,5 +1,7 @@
 # express-device [![Build Status](https://secure.travis-ci.org/rguerreiro/express-device.png?branch=master)](http://travis-ci.org/rguerreiro/express-device) [![NPM version](https://badge.fury.io/js/express-device.svg)](http://badge.fury.io/js/express-device)
 
+Case you're interested only on the device type detection based on the useragent string and don't need all the [express](http://expressjs.com/) related stuff, then use the `device` package ([https://www.npmjs.com/package/device](https://www.npmjs.com/package/device)) which was refactored from `express-device` for that purpose.
+
 ## why express-device?
 
 I'm really into node.js and lately I've been playing a lot with it. One of the steps I wanted to take in my learning path was to build a node.js module and published it to npm.
@@ -20,7 +22,7 @@ But then I came across with Brett Jankord's [blog](http://www.brettjankord.com).
 
 ## how to use it?
 
-From v0.4.0 express-device only works with [express](http://expressjs.com/) >= v4.x.x and [node](https://nodejs.org) >= v0.10. To install it you only need to do:
+From v0.4.0 `express-device` only works with [express](http://expressjs.com/) >= v4.x.x and [node](https://nodejs.org) >= v0.10. To install it you only need to do:
 
     $ npm install express-device
 
@@ -32,7 +34,7 @@ Case you're using [express](http://expressjs.com/) 2.x.x you should install vers
 
     $ npm install express-device@0.1.2
 
-express-device is built on top of [express](http://expressjs.com/) framework. Here's an example on how to configure express to use it:
+`express-device` is built on top of [express](http://expressjs.com/) framework. Here's an example on how to configure express to use it:
 
 ```javascript
 var device = require('express-device');
@@ -61,7 +63,7 @@ By doing this you're enabling the **request** object to have a property called *
     </tr>
 </table>
 
-Since version 0.3.4 you can now override some options when calling **device.capture()**. It accepts an object with only the config options you which to override (go [here](https://github.com/rguerreiro/express-device/blob/master/test/not_default_options_test.js) for some examples). The ones you don't override it will use the default values. Here's the list with the available config options:
+Since version 0.3.4 you can now override some options when calling **device.capture()**. It accepts an object with only the config options (the same that the `device` supports) you which to override (go [here](https://github.com/rguerreiro/express-device/blob/master/test/not_default_options_test.js) for some examples). The ones you don't override it will use the default values. Here's the list with the available config options:
 <table>
     <tr><td><strong>Name</strong></td><td><strong>Field Type</strong></td><td><strong>Description</strong></td><td><strong>Possible Values</strong></td></tr>
     <tr>
@@ -90,7 +92,7 @@ Since version 0.3.4 you can now override some options when calling **device.capt
     </tr>
 </table>
 
-express-device can also add some variables to the response [locals property](http://expressjs.com/api.html#res.locals\(\)) that will help you to build a responsive design:
+`express-device` can also add some variables to the response [locals property](http://expressjs.com/api.html#res.locals\(\)) that will help you to build a responsive design:
 <table>
     <tr>
         <td>is_desktop</td>
@@ -238,7 +240,7 @@ app.get('/', function(req, res) {
 
 ## where to go from here?
 
-Currently express-device is on **version 0.4.1**. In order to add more features I'm asking anyone to contribute with some ideas. If you have some of your own please feel free to mention it [here](https://github.com/rguerreiro/express-device/issues/26).
+Currently `express-device` is on **version 0.4.2**. In order to add more features I'm asking anyone to contribute with some ideas. If you have some of your own please feel free to mention it [here](https://github.com/rguerreiro/express-device/issues/26).
 
 But I prefer that you make your contribution with some pull requests ;)
 
@@ -246,7 +248,7 @@ But I prefer that you make your contribution with some pull requests ;)
 
 (The MIT License)
 
-Copyright (c) 2015 Rodrigo Guerreiro
+Copyright (c) 2012-2015 Rodrigo Guerreiro
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
