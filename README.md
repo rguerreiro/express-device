@@ -53,7 +53,7 @@ By doing this you're enabling the **request** object to have a property called *
         <td>type</td>
         <td>string</td>
         <td>It gets the device type for the current request</td>
-        <td>desktop, tv, tablet, phone or bot</td>
+        <td>desktop, tv, tablet, phone, bot or car</td>
     </tr>
     <tr>
         <td>name</td>
@@ -70,19 +70,25 @@ Since version 0.3.4 you can now override some options when calling **device.capt
         <td>emptyUserAgentDeviceType</td>
         <td>string</td>
         <td>Device type to be returned whenever the request has an empty user-agent. Defaults to desktop.</td>
-        <td>desktop, tv, tablet, phone or bot</td>
+        <td>desktop, tv, tablet, phone, bot or car</td>
     </tr>
 	<tr>
         <td>unknownUserAgentDeviceType</td>
         <td>string</td>
         <td>Device type to be returned whenever the request user-agent is unknown. Defaults to phone.</td>
-        <td>desktop, tv, tablet, phone or bot</td>
+        <td>desktop, tv, tablet, phone, bot or car</td>
     </tr>
     <tr>
         <td>botUserAgentDeviceType</td>
         <td>string</td>
         <td>Device type to be returned whenever the request user-agent belongs to a bot. Defaults to bot.</td>
-        <td>desktop, tv, tablet, phone or bot</td>
+        <td>desktop, tv, tablet, phone, bot or car</td>
+    </tr>
+    <tr>
+        <td>carUserAgentDeviceType</td>
+        <td>string</td>
+        <td>Device type to be returned whenever the request user-agent belongs to a car. Defaults to car.</td>
+        <td>desktop, tv, tablet, phone, bot or car</td>
     </tr>
     <tr>
         <td>parseUserAgent</td>
@@ -119,6 +125,10 @@ Since version 0.3.4 you can now override some options when calling **device.capt
         <td>It returns true in case the device type is "bot"; false otherwise</td>
     </tr>
     <tr>
+        <td>is_car</td>
+        <td>It returns true in case the device type is "car"; false otherwise</td>
+    </tr>
+    <tr>
         <td>device_type</td>
         <td>It returns the device type string parsed from the request</td>
     </tr>
@@ -147,10 +157,13 @@ Here's an example on how to use them (using [EJS](https://github.com/visionmedia
     <p>You're using a tablet</p>
     <% } %>
     <% if (is_tv) { %>
-    <p>You're using a tablet</p>
+    <p>You're using a tv</p>
     <% } %>
     <% if (is_bot) { %>
-    <p>You're using a tablet</p>
+    <p>You're using a bot</p>
+    <% } %>
+    <% if (is_car) { %>
+    <p>You're using a car</p>
     <% } %>
 </body>
 </html>

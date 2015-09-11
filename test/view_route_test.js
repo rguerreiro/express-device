@@ -132,6 +132,28 @@ describe('app', function () {
         });
     });
     
+    describe('GET / from car', function () {
+        it('should render with car/layout.ejs', function (done) {
+            request(app)
+                .get('/')
+                .set('User-Agent', 'QtCarBrowser')
+                .expect(200)
+                .expect('<html><head><title>express-device for car</title></head><body><h1>index</h1></body></html>')
+                .end(done);
+        });
+    });
+    
+    describe('GET /view from car', function () {
+        it('should render view car/index2.ejs with car/layout.ejs', function (done) {
+            request(app)
+                .get('/view')
+                .set('User-Agent', 'QtCarBrowser')
+                .expect(200)
+                .expect('<html><head><title>express-device for car</title></head><body><h1>car</h1></body></html>')
+                .end(done);
+        });
+    });
+    
     describe('GET /custom-layout', function () {
         it('should render with xpto/etc.ejs', function (done) {
             request(app)
