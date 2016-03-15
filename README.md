@@ -1,4 +1,4 @@
-# express-device [![Build Status](https://secure.travis-ci.org/rguerreiro/express-device.png?branch=master)](http://travis-ci.org/rguerreiro/express-device) [![NPM version](https://badge.fury.io/js/express-device.svg)](http://badge.fury.io/js/express-device)
+# express-device [![NPM version](http://img.shields.io/npm/v/express-device.svg?style=flat)](https://npmjs.org/package/express-device) [![Downloads](https://img.shields.io/npm/dm/express-device.svg?style=flat)](https://npmjs.org/package/express-device) [![Build Status](https://secure.travis-ci.org/rguerreiro/express-device.png?branch=master)](http://travis-ci.org/rguerreiro/express-device)
 
 Case you're interested only on the device type detection based on the useragent string and don't need all the [express](http://expressjs.com/) related stuff, then use the `device` package ([https://www.npmjs.com/package/device](https://www.npmjs.com/package/device)) which was refactored from `express-device` for that purpose.
 
