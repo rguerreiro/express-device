@@ -137,7 +137,7 @@ Since version 0.3.4 you can now override some options when calling **device.capt
         <td>It returns the device name string parsed from the request</td>
     </tr>
 </table>
-In order to enable this method you have to pass the app reference to **device.enableDeviceHelpers(app)**, just before **app.use(app.router)**.
+In order to enable this method you have to pass the app reference to **device.enableDeviceHelpers(app)**, just after **app.use(device.capture())**.
 
 Here's an example on how to use them (using [EJS](https://github.com/visionmedia/ejs) view engine):
 ```html
